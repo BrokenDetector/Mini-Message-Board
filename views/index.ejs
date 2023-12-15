@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/images/github-logo-black.svg" />
+        <link href="/stylesheets/style.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title><%= title %></title>
+    </head>
+    <body class="bg-slate-300">
+        <div class="flex flex-col gap-10 items-center m-7 font-bold">
+            <h1 class="text-4xl"><%= title %></h1>
+
+            <a href="/new" class="bg-green-300 font-bold p-3 rounded-md w-fit">Send new message</a>
+
+            <div class="flex flex-col justify-center gap-5 p-5 border-2 rounded-lg bg-slate-50 drop-shadow-lg">
+                <p>Welcome to <%= title %></p>
+                <% if(typeof messages != 'undefined'){%> <% messages.forEach(item =>{ %>
+                <div class="border-2 rounded-lg drop-shadow-lg bg-slate-100 border-slate-300 p-5">
+                    <p><%= item.text %></p>
+                    <p class="italic font-normal"><%= item.user %></p>
+                    <p class="text-slate-700"><%= item.added %></p>
+                </div>
+                <%})%> <% } else {} %>
+            </div>
+        </div>
+        <div class="mt-auto py-3 h-fit text-center text-base items-center flex justify-center">
+            <p>Made by<a href="https://github.com/BrokenDetector" class="hover:text-lime-700 duration-100"> BrokenDetector</a></p>
+            <img class="w-6 h-auto ml-1" src="images/github-logo-black.svg" />
+        </div>
+    </body>
+</html>

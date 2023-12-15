@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/images/github-logo-black.svg" />
+        <link href="/stylesheets/style.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title><%= title %></title>
+    </head>
+    <body class="bg-slate-300">
+        <div class="flex flex-wrap flex-col gap-10 items-center m-7 font-bold">
+            <h1 class="text-4xl">New message</h1>
+
+            <form
+                method="post"
+                action="/new"
+                class="flex flex-col justify-center items-center gap-4 p-5 bg-slate-50 drop-shadow-lg rounded-lg"
+            >
+                <label for="messageUser">Your Name:</label>
+                <input type="text" name="messageUser" class="border-2 p-2 border-slate-400" /><br />
+
+                <label for="messageText">Message:</label>
+                <input type="text" name="messageText" class="border-2 p-2 border-slate-400" /><br />
+
+                <button type="submit" class="bg-green-300 p-3 rounded-md w-fit">Send message</button>
+            </form>
+        </div>
+        <div class="mt-auto py-3 h-fit text-center text-base items-center flex justify-center">
+            <p>Made by<a href="https://github.com/BrokenDetector" class="hover:text-lime-700 duration-100"> BrokenDetector</a></p>
+            <img class="w-6 h-auto ml-1" src="images/github-logo-black.svg" />
+        </div>
+    </body>
+</html>
